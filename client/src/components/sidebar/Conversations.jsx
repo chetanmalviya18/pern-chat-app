@@ -4,7 +4,7 @@ import Conversation from "./Conversation";
 
 const Conversations = () => {
   return (
-    <div className="py-2 flex flex-col overflow-auto">
+    <div className="py-2 flex flex-col overflow mt-auto md:max-w-full mr-7">
       {DUMMY_CONVERSATIONS.map((conversation) => (
         <Conversation key={conversation.id} conversation={conversation} />
       ))}
