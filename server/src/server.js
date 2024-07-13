@@ -1,8 +1,11 @@
+import path from "path";
 import express from "express";
 import cookieParser from "cookie-parser";
 import routes from "./routes/index.js";
 import { app, server } from "./socket/socket.js";
 // import cors from "cors";
+
+const __dirname = path.resolve();
 
 // app.use(cors());
 app.use(cookieParser());

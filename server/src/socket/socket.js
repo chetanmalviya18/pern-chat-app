@@ -19,7 +19,7 @@ export const getReceiverSocketId = (receiverId) => {
 const userSocketMap = {};
 
 io.on("connection", (socket) => {
-  console.log("User Connected", socket.id);
+  // console.log("User Connected", socket.id);
 
   const userId = socket.handshake.query.userId;
 
@@ -30,7 +30,7 @@ io.on("connection", (socket) => {
 
   //socket.on() is used to listen to the evnts. can be used both on client and server side
   socket.on("disconnect", () => {
-    console.log("User disconnected", socket.id);
+    // console.log("User disconnected", socket.id);
     delete userSocketMap[userId];
     io.emit("getOnlineUsers", Object.keys(userSocketMap));
   });
