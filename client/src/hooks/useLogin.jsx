@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useAuthContext } from "../context/AuthContext";
-import axios from "axios";
+import toast from "react-hot-toast";
 
 const useLogin = () => {
   const [loading, setLoading] = useState(false);
@@ -31,7 +31,7 @@ const useLogin = () => {
       //   console.log(data);
       setAuthUser(data);
     } catch (error) {
-      console.error(error.message);
+      toast.error(error.message);
     } finally {
       setLoading(false);
     }
