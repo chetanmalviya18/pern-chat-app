@@ -4,9 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon server/src/server.js",
-    "build": "npm install && prisma generate --schema=./server/prisma/schema.prisma && npm install --prefix client && npm run build --prefix client",
-    "start": "node server/src/server.js"
+    "dev": "nodemon server/src/server.js"
   },
   "keywords": [],
   "author": "",
