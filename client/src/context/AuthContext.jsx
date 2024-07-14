@@ -18,9 +18,12 @@ export const AuthContextProvider = ({ children }) => {
     const fetchUser = async () => {
       try {
         const res = await fetch("/api/auth/me");
+
+         if (!res.ok) throw new Error(data.error);
+        
         const data = await res.json();
 
-        if (!res.ok) throw new Error(data.error);
+       
 
         setAuthUser(data);
       } catch (error) {
