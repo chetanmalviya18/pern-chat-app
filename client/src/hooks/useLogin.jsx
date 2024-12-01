@@ -12,7 +12,7 @@ const useLogin = () => {
       setLoading(true);
       const res = await axios.post(
         "/api/auth/login",
-        { inputs },
+        { username: inputs.username, password: inputs.password },
         {
           headers: {
             "Content-Type": "application/json",
